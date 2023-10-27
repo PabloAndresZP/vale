@@ -30,7 +30,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
     ));
 
     // Retraso de 3 segundos antes de comenzar la animación
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       setState(() {
         _isAnimationReady = true;
       });
