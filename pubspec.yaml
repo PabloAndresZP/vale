@@ -71,51 +71,16 @@ flutter:
     - assets/images/papitas_00045.png
     - assets/images/papitas_00046.png
     - assets/images/papitas_00047.png
-    - assets/images/papitas_00048.png
-    - assets/images/papitas_00049.png
-    - assets/images/papitas_00050.png
-    - assets/images/papitas_00051.png
-    - assets/images/papitas_00052.png
-    - assets/images/papitas_00053.png
-    - assets/images/papitas_00054.png
-    - assets/images/papitas_00055.png
-    - assets/images/papitas_00056.png
-    - assets/images/papitas_00057.png
-    - assets/images/papitas_00058.png
-    - assets/images/papitas_00059.png
-    - assets/images/papitas_00060.png
-    - assets/images/papitas_00061.png
-    - assets/images/papitas_00062.png
-    - assets/images/papitas_00063.png
-    - assets/images/papitas_00064.png
-    - assets/images/papitas_00065.png
-    - assets/images/papitas_00066.png
-    - assets/images/papitas_00067.png
-    - assets/images/papitas_00068.png
-    - assets/images/papitas_00069.png
-    - assets/images/papitas_00070.png
-    - assets/images/papitas_00071.png
-    - assets/images/papitas_00072.png
-    - assets/images/papitas_00073.png
-    - assets/images/papitas_00074.png
-    - assets/images/papitas_00075.png
-    - assets/images/papitas_00076.png
-    - assets/images/papitas_00077.png
-    - assets/images/papitas_00078.png
-    - assets/images/papitas_00079.png
-    - assets/images/papitas_00080.png
-    - assets/images/papitas_00081.png
-    - assets/images/papitas_00082.png
-    - assets/images/papitas_00083.png
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+    - assets/images/ilus_01.png
+    - assets/images/ilus_02.png
+    - assets/images/ilus_03.png
+   
+
+  fonts:
+    - family: FlameBold
+      fonts:
+        - asset: assets/fonts/FlameBold.otf
+    - family: FlameRegular
+      fonts:
+        - asset: assets/fonts/FlameRegular.otf

@@ -19,12 +19,12 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
 
     // Inicializar el controlador de animación
     _controller = AnimationController(
-      duration: const Duration(seconds: 7),
+      duration: const Duration(seconds: 4),
       vsync: this,
     );
 
     // Definir la animación
-    _animation = IntTween(begin: 0, end: 82).animate(CurvedAnimation(
+    _animation = IntTween(begin: 0, end: 47).animate(CurvedAnimation(
       parent: _controller,
       curve: Curves.linear,
     ));
@@ -52,24 +52,31 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
         body: Center(
           child: CircularProgressIndicator(),
         ),
+        backgroundColor: Color(0xFFE2D6C7), // Color de fondo agregado aquí
       );
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tu Regalo Animado'),
+      body: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: AnimatedBuilder(
+              animation: _animation,
+              builder: (context, child) {
+                String frame = _animation.value.toString().padLeft(5, '0');
+                return RepaintBoundary(
+                  child: Image.asset('assets/images/papitas_$frame.png', gaplessPlayback: true),
+                );
+              },
+            ),
+          ),
+        ],
       ),
-      body: Center(
-        child: AnimatedBuilder(
-          animation: _animation,
-          builder: (context, child) {
-            String frame = _animation.value.toString().padLeft(5, '0');
-            return RepaintBoundary(
-              child: Image.asset('assets/images/papitas_$frame.png', gaplessPlayback: true),
-            );
-          },
-        ),
-      ),
+      backgroundColor: Color(0xFFE2D6C7), // Color de fondo agregado aquí
     );
   }
 }
+
