@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class GiftAnimationPage extends StatefulWidget {
-  const GiftAnimationPage({super.key});
+  const GiftAnimationPage({Key? key}) : super(key: key);
 
   @override
   _GiftAnimationPageState createState() => _GiftAnimationPageState();
@@ -12,6 +13,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
   late final AnimationController _controller;
   late final Animation<int> _animation;
   bool _isAnimationReady = false;
+  final AudioPlayer _audioPlayer = AudioPlayer();
 
   @override
   void initState() {
@@ -30,10 +32,13 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
     ));
 
     // Retraso de 3 segundos antes de comenzar la animación
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () async {
       setState(() {
         _isAnimationReady = true;
       });
+
+      // Reproducir el sonido
+      await _audioPlayer.play('assets/sonidos/papitas.mp3', isLocal: true);
 
       _controller.forward();
     });
@@ -42,6 +47,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
   @override
   void dispose() {
     _controller.dispose();
+    _audioPlayer.dispose();
     super.dispose();
   }
 
@@ -52,7 +58,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
         body: Center(
           child: CircularProgressIndicator(),
         ),
-        backgroundColor: Color(0xFFE2D6C7), // Color de fondo agregado aquí
+        backgroundColor: Color(0xFFE2D6C7),
       );
     }
 
@@ -75,8 +81,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
           ),
         ],
       ),
-      backgroundColor: Color(0xFFE2D6C7), // Color de fondo agregado aquí
+      backgroundColor: Color(0xFFE2D6C7),
     );
   }
 }
-

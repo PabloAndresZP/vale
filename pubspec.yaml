@@ -10,13 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
+  audioplayers: ^0.20.1 # Añade esta línea para la dependencia audioplayers
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:
@@ -75,7 +74,8 @@ flutter:
     - assets/images/ilus_01.png
     - assets/images/ilus_02.png
     - assets/images/ilus_03.png
-   
+    - assets/sonidos/papitas.mp3
+
 
   fonts:
     - family: FlameBold
