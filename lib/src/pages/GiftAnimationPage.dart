@@ -19,7 +19,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
 
     // Inicializar el controlador de animación
     _controller = AnimationController(
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 7),
       vsync: this,
     );
 
@@ -30,7 +30,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
     ));
 
     // Retraso de 3 segundos antes de comenzar la animación
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 3), () {
       setState(() {
         _isAnimationReady = true;
       });
@@ -65,7 +65,7 @@ class _GiftAnimationPageState extends State<GiftAnimationPage>
           builder: (context, child) {
             String frame = _animation.value.toString().padLeft(5, '0');
             return RepaintBoundary(
-              child: Image.asset('assets/images/papitas_$frame.png'),
+              child: Image.asset('assets/images/papitas_$frame.png', gaplessPlayback: true),
             );
           },
         ),
